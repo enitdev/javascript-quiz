@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/font-awesome.min.css" rel="stylesheet"> <!--? icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script>
+    window.onload = function() {
+        document.getElementById("answContainer").style.display = 'none';
+        document.getElementById("imgFrame").style.display = 'none';
+        document.getElementById("qLabel").style.display = 'none';
+    }
+    </script>
+    <title>DJ Quiz</title>
+</head>
+<body>
+
+<!--* Navigation Bootstrap-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="margin-left: 1rem;">Which DJ Are You?</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" target="_new" href="index.html">Start Quiz</a>
+                <a class="nav-link" target="_new" href="https://literecords.com">Learn to DJ</a>
+                <a class="nav-link" target="_new" href="https://djmag.com/top100djs">DJ Top 100</a>
+                <a class="nav-link disabled">Brought to you by LiteRECORDS</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+    <!--* Question-->
+    <div id="qLabel">
+        Question 1: Who is this artist?
+    </div><br>
+
+<!--* Main-->
+<main>
+
+    <!--* Image Panel-->
+    <div id="imgFrame">
+
+    </div>
+
+    <div id="answContainer">
+        <!--* Answer One-->
+        <div id="answ_a" class="answer" onclick="answerChosen(answ_a)">Example</div>
+        <!--* Answer Two-->
+        <div id="answ_b" class="answer" onclick="answerChosen(answ_b)">David Guetta</div>
+        <!--* Answer Three-->
+        <div id="answ_c" class="answer" onclick="answerChosen(answ_c)">Calvin Harris</div>
+        <!--* Answer Four-->
+        <div id="answ_d" class="answer" onclick="answerChosen(answ_d)">Plan B</div>
+    </div>
+
+</main>
+
+<!--* Footer-->
+<footer>
+    <div id="footer">
+        <!-- <span style="color: rgba(255,255,255,.55)">Javascript Quiz project for The Developer Academy.</span><br>
+        Designed by enitial -->
+
+        <div style="float: left; margin-top: -0.3rem;">
+            <a href="https://github.com/enitial" target="_new"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>&nbsp;
+            <a href="https://www.facebook.com/THATeNITIAL"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;
+
+            <span style="color: rgba(255,255,255,.55);">Javascript Quiz project for The Developer Academy / </span> Designed by enitial.
+        </div>
+    </div>
+</footer>
+
+    <!--* Scripts-->
+    <script src="js/lib.js"></script>
+</body>
+</html>
