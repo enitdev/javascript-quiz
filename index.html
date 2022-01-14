@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" target="_new" href="index.html">Start Quiz</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Start Quiz</a>
                 <a class="nav-link" target="_new" href="https://literecords.com">Learn to DJ</a>
                 <a class="nav-link" target="_new" href="https://djmag.com/top100djs">DJ Top 100</a>
                 <a class="nav-link disabled">Brought to you by LiteRECORDS</a>
@@ -287,15 +287,33 @@
 
     <div id="answContainer">
         <!--* Answer One-->
-        <div id="answ_10a" class="answer" onclick="answerChosen(answ_10a, 10)">Paul Van Dyke</div>
+        <div id="answ_10a" class="answer" onclick="answerChosen10(answ_10a, 10, djTitle, printScore, feedback)">Paul Van Dyke</div>
         <!--* Answer Two-->
-        <div id="answ_10b" class="answer" onclick="answerChosen(answ_10b, 10)">Ian Van Dhal</div>
+        <div id="answ_10b" class="answer" onclick="answerChosen10(answ_10a, 10, djTitle, printScore, feedback)">Ian Van Dhal</div>
         <!--* Answer Three-->
-        <div id="answ_10c" class="answer" onclick="answerChosen(answ_10c, 10)">Armin Van Buuren</div>
+        <div id="answ_10c" class="answer" onclick="answerChosen10(answ_10a, 10, djTitle, printScore, feedback)">Armin Van Buuren</div>
         <!--* Answer Four-->
-        <div id="answ_10d" class="answer" onclick="answerChosen(answ_10d, 10)">Pete Tong</div>
+        <div id="answ_10d" class="answer" onclick="answerChosen10(answ_10a, 10, djTitle, printScore, feedback)">Pete Tong</div>
     </div>
 </main>
+</question>
+
+<!--! Page Results-->
+<question id="11" style="display: none;">
+    <div id="qLabel" style="height: 75%; width: 90%!important; margin: auto; text-align: center;">
+        Great job! You're a <span id="djTitle"></span>!<br>
+        <hr>
+        <br>
+        <span style="font-size: 1.5rem; color: rgba(255,255,255,.55)">
+        You scored <span id="printScore"></span> out of 10. That's impressive!<br>
+        <span id="feedback"></span><br><br>
+            <img src="img/silhouette.png" height=100>&nbsp;&nbsp;&nbsp;
+            <img src="img/silhouette.png" height=100>&nbsp;&nbsp;&nbsp;
+            <img src="img/silhouette.png" height=100><br><br>
+        Thanks for playing!
+        </span>
+        <br><br><button type="button" class="btn btn-outline-primary btn-lg" value="Restart Quiz" onclick="location.href='index.html'">Restart Quiz</button>
+    </div><br>    
 </question>
 
 <!--* Footer-->
