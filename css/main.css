@@ -14,7 +14,7 @@ body {
     height: 100%;
 }
 body::before {
-    background: url("/img/background.jpg") no-repeat center center fixed;
+    background: url(img/background.jpg) no-repeat center center fixed;
     content: '';
     z-index: -1;
     width: 100%;
