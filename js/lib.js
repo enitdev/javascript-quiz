@@ -7,7 +7,7 @@ function yourScore(qTitle, qScore, qFeedback) {
     if (qCorrect == 9 | 10) {
         document.getElementById(qTitle).innerHTML = "Superstar DJ";
         document.getElementById(qScore).innerHTML = qCorrect;
-        document.getElementById(qFeedback).innerHTML = "That was amazing! Where did you gather all this knowledge from?! I'm sure we'll be seeing you headling events in the future";
+        document.getElementById(qFeedback).innerHTML = "That was amazing! Where did you gather all this knowledge from?! I'm sure we'll be seeing you headlining events in the future";
     } else if (qCorrect == 6 | 7 | 8) {
         document.getElementById(qTitle).innerHTML = "Great DJ";
         document.getElementById(qScore).innerHTML = qCorrect;
