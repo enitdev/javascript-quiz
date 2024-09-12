@@ -4,14 +4,22 @@ let questionNum = 0;
 let qCorrect = 0;
 
 function yourScore(qTitle, qScore, qFeedback) {
-    if (qCorrect == 9 | 10) {
+    // This is a bitwise or, and you want a logical or
+    // Here the statment will evaluate to `if (qCorrect == 11)`
+    // 9  == 0b1001
+    // 10 == 0b1010
+    // 9 | 10 == 0b1011 == 11
+    if (qCorrect == 9 || qCorrect == 10) {
         document.getElementById(qTitle).innerHTML = "Superstar DJ";
         document.getElementById(qScore).innerHTML = qCorrect;
         document.getElementById(qFeedback).innerHTML = "That was amazing! Where did you gather all this knowledge from?! I'm sure we'll be seeing you headlining events in the future";
-    } else if (qCorrect == 6 | 7 | 8) {
+    // If we want to shortcut, then we can use Array.includes 
+    // 6 | 7 | 8 == 15
+    } else if ([6, 7, 8].includes(qCorrect)) {
         document.getElementById(qTitle).innerHTML = "Great DJ";
         document.getElementById(qScore).innerHTML = qCorrect;
         document.getElementById(qFeedback).innerHTML = "That was some impressive score. Have you thought about being doing a mobile disco? I really think you could WOW at parties";
+    // 4 | 5 == 5
     } else if (qCorrect == 4 | 5) {
         document.getElementById(qTitle).innerHTML = "DJ in the making";
         document.getElementById(qScore).innerHTML = qCorrect;
@@ -23,24 +31,23 @@ function yourScore(qTitle, qScore, qFeedback) {
     }
 }
 function changeQ(qID) {
-    let id = document.getElementById(qID).style.display = "none";
+    // Extraneous assignments
+    document.getElementById(qID).style.display = "none";
     qID++;
-    let newQ = document.getElementById(qID).style.display = "block";
+    document.getElementById(qID).style.display = "block";
 }
 function answerChosen(div, num) {
     let x = div.id;
     let y = num;
     let z = document.getElementById(x).innerHTML
+    // TODO change all color codes to constants like "MEDIUM_ORANGE", "DARK_GREEN", and "DARK_RED"
     let id1val = document.getElementById(x).style.backgroundColor = "#BF8D13";
     decision(x, y, z);
 }
 // Question 10 answerChosen
 function answerChosen10(div, num, qTitle, qScore, qFeedback) {
-    let x = div.id;
-    let y = num;
-    let z = document.getElementById(x).innerHTML;
-    let id1val = document.getElementById(x).style.backgroundColor = "#BF8D13";
-    decision(x, y, z);
+    // Avoid copy/paste wherever possible
+    answerChosen(div, num);
         //
     let a = qTitle.id;
     let b = qScore.id;
@@ -48,6 +55,22 @@ function answerChosen10(div, num, qTitle, qScore, qFeedback) {
     yourScore(a, b, c);
 }
 function decision(brderId, frameId, answer) {
+    // There is a lot of duplicate code below. It should be broken out.
+    // Use the switch statement just to determine if the answer was correct,
+    // then have a single place where your logic for success or failure happens
+    /*
+    let wasCorrect = false;
+    switch (frameId) {
+        case 1:
+            wasCorrect = (answer == "Calvin Harris");
+            break;
+        ...
+    }
+
+    // TODO redo the correct/incorrect stuff to remove as much duplicate code as possible
+    */
+
+
     switch(frameId) {
     case 1:
         if (answer == "Calvin Harris") {
